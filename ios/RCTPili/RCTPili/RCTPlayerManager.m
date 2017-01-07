@@ -22,11 +22,11 @@ RCT_EXPORT_MODULE();
 - (NSArray *)customDirectEventTypes
 {
     return @[
-             @"onLoading",
-             @"onPaused",
-             @"onShutdown",
-             @"onError",
-             @"onPlaying"
+             @"onPlayerLoading",
+             @"onPlayerPaused",
+             @"onPlayerShutdown",
+             @"onPlayerError",
+             @"onPlayerPlaying"
              ];
 }
 

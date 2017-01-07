@@ -127,7 +127,7 @@ public class PiliStreamingViewManager extends SimpleViewManager<AspectFrameLayou
             StreamingProfile.VideoProfile vProfile = new StreamingProfile.VideoProfile(30, 1000 * 1024, 48);//fps bps maxFrameInterval
             StreamingProfile.AVProfile avProfile = new StreamingProfile.AVProfile(vProfile, aProfile);
             mProfile.setVideoQuality(StreamingProfile.VIDEO_QUALITY_HIGH3)
-//                    .setPublishUrl("rtmp://pili-publish.wantplus.cn/wantplus-1/bhjkhjgcnkknn?key=f4f380426f4bdb1a")
+//                    .setPublishUrl("rtmp://live-waw.twitch.tv/app/live_126742273_xjyOrVob4Q8b1TZkstJBH8tQlqqNgu")
                     .setAudioQuality(StreamingProfile.AUDIO_QUALITY_MEDIUM2)
 //                .setPreferredVideoEncodingSize(960, 544)
                     .setEncodingSizeLevel(Config.ENCODING_LEVEL)

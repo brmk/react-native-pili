@@ -38,11 +38,11 @@ public class PiliPlayerViewManager extends SimpleViewManager<PLVideoView> implem
     private int aspectRatio;
 
     public enum Events {
-        LOADING("onLoading"),
-        PAUSE("onPaused"),
-        SHUTDOWN("onShutdown"),
-        ERROR("onError"),
-        PLAYING("onPlaying");
+        LOADING("onPlayerLoading"),
+        PAUSE("onPlayerPaused"),
+        SHUTDOWN("onPlayerShutdown"),
+        ERROR("onPlayerError"),
+        PLAYING("onPlayerPlaying");
 
         private final String mName;
 

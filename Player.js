@@ -22,34 +22,34 @@ class Player extends Component {
   }
 
   _onLoading(event) {
-    this.props.onLoading && this.props.onLoading(event.nativeEvent);
+    this.props.onPlayerLoading && this.props.onPlayerLoading(event.nativeEvent);
   }
 
   _onPaused(event) {
-    this.props.onPaused && this.props.onPaused(event.nativeEvent);
+    this.props.onPlayerPaused && this.props.onPlayerPaused(event.nativeEvent);
   }
 
   _onShutdown(event) {
-    this.props.onShutdown && this.props.onShutdown(event.nativeEvent);
+    this.props.onPlayerShutdown && this.props.onPlayerShutdown(event.nativeEvent);
   }
 
 
   _onError(event) {
-    this.props.onError && this.props.onError(event.nativeEvent);
+    this.props.onPlayerError && this.props.onPlayerError(event.nativeEvent);
   }
 
   _onPlaying(event) {
-    this.props.onPlaying && this.props.onPlaying(event.nativeEvent);
+    this.props.onPlayerPlaying && this.props.onPlayerPlaying(event.nativeEvent);
   }
 
   render() {
     const nativeProps = Object.assign({}, this.props);
     Object.assign(nativeProps, {
-      onLoading: this._onLoading,
-      onPaused: this._onPaused,
-      onShutdown: this._onShutdown,
-      onError: this._onError,
-      onPlaying: this._onPlaying,
+      onPlayerLoading: this._onLoading,
+      onPlayerPaused: this._onPaused,
+      onPlayerShutdown: this._onShutdown,
+      onPlayerError: this._onError,
+      onPlayerPlaying: this._onPlaying,
     });
     return (
         <RCTPlayer
@@ -70,11 +70,11 @@ Player.propTypes = {
   started:PropTypes.bool,
   muted:PropTypes.bool, //iOS only
   aspectRatio: PropTypes.oneOf([0, 1, 2, 3, 4]),
-  onLoading: PropTypes.func,
-  onPaused: PropTypes.func,
-  onShutdown: PropTypes.func,
-  onError: PropTypes.func,
-  onPlaying: PropTypes.func,
+  onPlayerLoading: PropTypes.func,
+  onPlayerPaused: PropTypes.func,
+  onPlayerShutdown: PropTypes.func,
+  onPlayerError: PropTypes.func,
+  onPlayerPlaying: PropTypes.func,
   ...View.propTypes,
 }
 
